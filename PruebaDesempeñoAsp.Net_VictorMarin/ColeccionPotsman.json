@@ -1,0 +1,563 @@
+{
+	"info": {
+		"_postman_id": "93242e6f-c2c4-4b7c-b10f-8eab4524f91d",
+		"name": "Collection 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34991765"
+	},
+	"item": [
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Listar estudiantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"students"
+							]
+						},
+						"description": "Este endpoint lista todos los registros pertenecientes a la tabla Students de la base de datos"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear estudiante",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"names\": \"Alberto Velez\",\n    \"birthDate\": \"2024-05-21\",\n    \"address\": \"Calle 123\",\n    \"email\": \"alberto@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5175/api/students/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"students",
+								"create"
+							]
+						},
+						"description": "Este endpoint crea un registro en la tabla Students de la base de datos"
+					},
+					"response": []
+				},
+				{
+					"name": "Ver detalles de un estudiante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/students/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"students",
+								"2"
+							]
+						},
+						"description": "Este endpoint permite ver el registro por Id perteneciente a la tabla Students en la base de datos (devuelve un registro)"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar un estudiante",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"names\": \"Camilo Ciro/actualizado\",\n    \"birthDate\": \"2024-11-08\",\n    \"address\": \"Calle 123\",\n    \"email\": \"camilo@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5175/api/students/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"students",
+								"update",
+								"2"
+							]
+						},
+						"description": "Este endpoint permite actualizar un registro en la tabla Students de la base de datos por medio de su Id (importante: agregar el mismo id de la ruta al cuerpo de la petición)"
+					},
+					"response": []
+				}
+			],
+			"description": "En esta colección podras consultar el crud de los estudiantes"
+		},
+		{
+			"name": "Teachers",
+			"item": [
+				{
+					"name": "Listar profesores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/teachers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"teachers"
+							]
+						},
+						"description": "Este endpoint lista todos los registros pertenecientes a la tabla Teachers de la base de datos"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear un profesor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"names\": \"Daniel Gonzales\",\n    \"speciality\": \"Español\",\n    \"phone\": \"789456133\",\n    \"email\": \"daniel@gmail.com\",\n    \"yearsExperience\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5175/api/teachers/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"teachers",
+								"create"
+							]
+						},
+						"description": "Este endpoint crea un registro en la tabla Teachers de la base de datos"
+					},
+					"response": []
+				},
+				{
+					"name": "Ver detalles de un profesor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/teachers/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"teachers",
+								"2"
+							]
+						},
+						"description": "Este endpoint permite ver el registro por Id perteneciente a la tabla Teachers en la base de datos (devuelve un registro)"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar un profesor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"names\": \"Manuela Gomez/Actualizado\",\n    \"speciality\": \"Matematicas/Actualizado\",\n    \"phone\": \"789456133\",\n    \"email\": \"manuela@gmail.com\",\n    \"yearsExperience\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5175/api/teachers/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"teachers",
+								"update",
+								"2"
+							]
+						},
+						"description": "Este endpoint permite actualizar un registro en la tabla Teachers de la base de datos por medio de su Id (importante: agregar el mismo id de la ruta al cuerpo de la petición)"
+					},
+					"response": []
+				}
+			],
+			"description": "En esta colección podras consultar el crud de los profesores"
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Listar Cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/Courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"Courses"
+							]
+						},
+						"description": "Este endpoint lista todos los registros pertenecientes a la tabla Courses de la base de datos"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nuevo curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Español\",\n    \"description\": \"Curso dedicado a la enseñanza de la lengua española\",\n    \"teacherId\": 3,\n    \"schedule\": \"12:00 pm a 02:00 pm\",\n    \"duration\": \"10 meses\",\n    \"capacity\": 40\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5175/api/courses/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"courses",
+								"create"
+							]
+						},
+						"description": "Este endpoint crea un registro en la tabla Courses de la base de datos"
+					},
+					"response": []
+				},
+				{
+					"name": "Ver detalles de un curso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/courses/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"courses",
+								"3"
+							]
+						},
+						"description": "Este endpoint permite ver el registro por Id perteneciente a la tabla Courses en la base de datos (devuelve un registro)"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar un curso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"name\": \"Matematicas\",\n    \"description\": \"Materia que enseña los numeros\",\n    \"teacherId\": 1,\n    \"schedule\": \"8:00 am a 9:00 am\",\n    \"duration\": \"10 meses\",\n    \"capacity\": 30\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5175/api/courses/update/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"courses",
+								"update",
+								"3"
+							]
+						},
+						"description": "Este endpoint permite actualizar un registro en la tabla Teachers de la base de datos por medio de su Id (importante: agregar el mismo id de la ruta al cuerpo de la petición)"
+					},
+					"response": []
+				}
+			],
+			"description": "En esta colección podras consultar el crud de los cursos"
+		},
+		{
+			"name": "Enrollments",
+			"item": [
+				{
+					"name": "Listado de matriculas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/enrollments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"enrollments"
+							]
+						},
+						"description": "Este endpoint lista todos los registros pertenecientes a la tabla Enrollments de la base de datos"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nueva matricula",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\": \"2024-02-10\",\n    \"studentId\": 3,\n    \"courseId\": 6,\n    \"status\": \"Activo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5175/api/enrollments/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"enrollments",
+								"create"
+							]
+						},
+						"description": "Este endpoint crea un registro en la tabla Enrollments de la base de datos"
+					},
+					"response": []
+				},
+				{
+					"name": "Ver detalles de una matricula",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/enrollments/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"enrollments",
+								"3"
+							]
+						},
+						"description": "Este endpoint permite ver el registro por Id perteneciente a la tabla Enrollments en la base de datos (devuelve un registro)"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar una matricula",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"date\": \"2024-02-10\",\n    \"studentId\": 3,\n    \"courseId\": 6,\n    \"status\": \"Inactivo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5175/api/enrollments/update/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"enrollments",
+								"update",
+								"3"
+							]
+						},
+						"description": "Este endpoint permite actualizar un registro en la tabla Teachers de la base de datos por medio de su Id (importante: agregar el mismo id de la ruta al cuerpo de la petición)"
+					},
+					"response": []
+				}
+			],
+			"description": "En esta colección podras consultar el crud de las matriculas"
+		},
+		{
+			"name": "Endpoints",
+			"item": [
+				{
+					"name": "Listar Matriculas en una fecha especifica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/enrollments/list/2024-02-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"enrollments",
+								"list",
+								"2024-02-10"
+							]
+						},
+						"description": "Este endpoint filtra la cantidad de matriculas por fecha especifica y devuelve los registros existentes en la base de datos."
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos los cursos que tiene un profesor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/courses/list/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"courses",
+								"list",
+								"3"
+							]
+						},
+						"description": "Este endpoint filtra la cantidad de cursos que tiene un profesor en la base de datos por medio de su Id (devuelve los registros asociados a ese profesor especifico)"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todas las matriculas que ha tenido un estudiante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/enrollments/list/student/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"enrollments",
+								"list",
+								"student",
+								"3"
+							]
+						},
+						"description": "Este endpoint filtra la cantidad de matriculas que tiene un estudiande en la base de datos por medio de su Id (devuelve los registros asociados a ese estudiante especifico)"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar estudiante por fecha de cumpleaños",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5175/api/students/list/2024-05-21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5175",
+							"path": [
+								"api",
+								"students",
+								"list",
+								"2024-05-21"
+							]
+						},
+						"description": "Este endpoint filtra la cantidad de registros de estudiantes que cumplen años en la misma fecha (devuelve los registros asociados a esa fecha especifica)"
+					},
+					"response": []
+				}
+			],
+			"description": "En esta colección podras realizar filtraciones segun requerimientos"
+		}
+	]
+}
